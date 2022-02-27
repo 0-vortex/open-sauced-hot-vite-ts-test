@@ -5,6 +5,14 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.1.0](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.0.0...v1.1.0) (2022-02-27)
+
+
+### 🍕 Features
+
+* add aria button navigations without content ([eaeb85c](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/eaeb85c41c2229b2ba77f118ca88db0a2bb243cc))
+* add pizza modal example ([a93f324](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/a93f3241e1233f8d600d4530c79dc2b9dae99236))
+
 ## 1.0.0 (2022-02-27)
 
 
