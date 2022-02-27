@@ -13,6 +13,7 @@
         "@supabase/supabase-js": "^1.30.7",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
+        "react-icons": "^4.3.1",
         "tailwindcss": "^3.0.23"
       },
       "devDependencies": {
@@ -11796,6 +11797,14 @@
       },
       "peerDependencies": {
         "react": ">=16.13.1"
+      }
+    },
+    "node_modules/react-icons": {
+      "version": "4.3.1",
+      "resolved": "https://registry.npmjs.org/react-icons/-/react-icons-4.3.1.tgz",
+      "integrity": "sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==",
+      "peerDependencies": {
+        "react": "*"
       }
     },
     "node_modules/react-is": {
