@@ -21,9 +21,17 @@ const PrimaryNav = () => {
       {!user && (
         <div className="items-center">
           <div
+            role="button"
+            tabIndex={0}
+            aria-pressed="false"
             className="cursor-pointer"
             onClick={async () => {
               await signIn({ provider: 'github' });
+            }}
+            onKeyDown={async (e) => {
+              if (e.key === 'Enter') {
+                await signIn({ provider: 'github' });
+              }
             }}
           >
             Login
