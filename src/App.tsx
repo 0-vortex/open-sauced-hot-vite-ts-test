@@ -1,10 +1,12 @@
+import Footer  from './components/Footer';
 import PrimaryNav from './components/PrimaryNav';
-import Footer  from "./components/Footer";
+import PostsWrap from './components/PostsWrap';
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="App">
       <PrimaryNav/>
+      <PostsWrap/>
       <Footer/>
     </div>
   )

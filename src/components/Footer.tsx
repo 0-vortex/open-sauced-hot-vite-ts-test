@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub, FaTwitter, FaDiscord, FaYoutube, FaDev } from 'react-icons/fa';
 
-const Footer = () => (
+const Footer = (): JSX.Element => (
  <div>
       <div className="bg-darkestGrey py-14 md:py-16">
         <nav className="container">

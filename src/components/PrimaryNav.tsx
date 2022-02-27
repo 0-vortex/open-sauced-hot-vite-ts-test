@@ -4,7 +4,7 @@ import logo from '../assets/logo.svg';
 import useSupabaseAuth from '../hooks/useSupabaseAuth';
 import { version } from '../../package.json';
 
-const PrimaryNav = () => {
+const PrimaryNav = (): JSX.Element => {
   const { signIn, signOut, user } = useSupabaseAuth();
 
   return (
