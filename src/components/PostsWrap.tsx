@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LayoutToggle from './LayoutToggle';
-// import Modal from './Modal.jsx';
+import Modal from './Modal';
 import SecondaryNav from './SecondaryNav';
 // import GridDisplay from './GridDisplay.jsx';
 // import ListDisplay from './ListDisplay.jsx';
@@ -9,13 +9,14 @@ import useSupabaseAuth from '../hooks/useSupabaseAuth';
 
 const PostsWrap = (): JSX.Element => {
   const [isGrid, setIsGrid] = useState(true);
-  const [activeLink, setActiveLink] = useState('popular');
+  const [activeLink, setActiveLink] = useState<string | null>('popular');
   const [fetchedData, setFetchedData] = useState([]);
   const [limit, setLimit] = useState(25);
   const { user } = useSupabaseAuth();
 
   return (
     <>
+      <Modal/>
       <SecondaryNav
         setLimit={setLimit}
         activeLink={activeLink}

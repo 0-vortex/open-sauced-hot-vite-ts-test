@@ -3,9 +3,9 @@ import {User} from "@supabase/supabase-js";
 
 export declare interface SecondaryNavProps {
   setLimit: (limit: number) => void;
-  activeLink: string;
+  activeLink: string | null;
   setActiveLink: (link: string | null) => void;
-  user: User;
+  user: User | null;
 }
 
 const SecondaryNav = ({setLimit, activeLink, setActiveLink, user}: SecondaryNavProps): JSX.Element => {
