@@ -16,9 +16,9 @@ const config = {
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}'
   ],
   "transform": {
-    '^.+\\.tsx?$': 'esbuild-jest',
-    '^.+\\.css$': '<rootDir>/.jest/cssTransform.js',
-    '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': '<rootDir>/.jest/fileTransform.js',
+    '^.+\\.[jt]sx?$': 'esbuild-jest',
+    '^.+\\.css$': '<rootDir>/.jest/cssTransform.cjs',
+    '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': '<rootDir>/.jest/fileTransform.cjs',
   },
   "transformIgnorePatterns": [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$',

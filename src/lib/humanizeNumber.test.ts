@@ -4,7 +4,7 @@ describe('Test: humanizeNumber()', () => {
   test('1000 should humanize', () => {
     const num = 1000;
     const result = humanizeNumber(num);
-    expect(result).toBe('1k');
+    expect(result).toBe('1.0k');
   });
 
   test("'100' should not humanize", () => {
