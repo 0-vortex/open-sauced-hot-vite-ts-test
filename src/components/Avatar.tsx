@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import getAvatarUrl from '../lib/getAvatarUrl';
-import getProfileUrl from '../lib/getProfileUrl';
+import { getAvatarLink, getProfileLink } from '../lib/github';
 
 export declare interface AvatarProps {
   contributor: string;
-  list: boolean;
+  list?: boolean;
 }
 
 const Avatar = ({contributor, list = false}: AvatarProps): JSX.Element => (
@@ -15,13 +14,13 @@ const Avatar = ({contributor, list = false}: AvatarProps): JSX.Element => (
     data-for={contributor}
   >
     <a
-      href={getProfileUrl(contributor)}
+      href={getProfileLink(contributor)}
       title={contributor}
       target="_blank"
     >
       <img
         className='object-cover'
-        src={getAvatarUrl(contributor)}
+        src={getAvatarLink(contributor)}
         alt={contributor}
         width={500}
         height={500}
