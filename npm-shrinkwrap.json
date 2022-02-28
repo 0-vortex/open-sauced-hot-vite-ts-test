@@ -14,6 +14,7 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-icons": "^4.3.1",
+        "react-tooltip": "^4.2.21",
         "tailwindcss": "^3.0.23"
       },
       "devDependencies": {
@@ -11714,6 +11715,21 @@
         "node": ">=6"
       }
     },
+    "node_modules/prop-types": {
+      "version": "15.8.1",
+      "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz",
+      "integrity": "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==",
+      "dependencies": {
+        "loose-envify": "^1.4.0",
+        "object-assign": "^4.1.1",
+        "react-is": "^16.13.1"
+      }
+    },
+    "node_modules/prop-types/node_modules/react-is": {
+      "version": "16.13.1",
+      "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",
+      "integrity": "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
+    },
     "node_modules/psl": {
       "version": "1.8.0",
       "resolved": "https://registry.npmjs.org/psl/-/psl-1.8.0.tgz",
@@ -11831,6 +11847,30 @@
       "dev": true,
       "engines": {
         "node": ">=0.10.0"
+      }
+    },
+    "node_modules/react-tooltip": {
+      "version": "4.2.21",
+      "resolved": "https://registry.npmjs.org/react-tooltip/-/react-tooltip-4.2.21.tgz",
+      "integrity": "sha512-zSLprMymBDowknr0KVDiJ05IjZn9mQhhg4PRsqln0OZtURAJ1snt1xi5daZfagsh6vfsziZrc9pErPTDY1ACig==",
+      "dependencies": {
+        "prop-types": "^15.7.2",
+        "uuid": "^7.0.3"
+      },
+      "engines": {
+        "npm": ">=6.13"
+      },
+      "peerDependencies": {
+        "react": ">=16.0.0",
+        "react-dom": ">=16.0.0"
+      }
+    },
+    "node_modules/react-tooltip/node_modules/uuid": {
+      "version": "7.0.3",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-7.0.3.tgz",
+      "integrity": "sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==",
+      "bin": {
+        "uuid": "dist/bin/uuid"
       }
     },
     "node_modules/readable-stream": {

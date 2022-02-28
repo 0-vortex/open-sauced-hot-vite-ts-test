@@ -52,7 +52,7 @@ function Modal() {
 
             <div className=" flex flex-col w-full">
               {levels.map(({name, daysRequired, color}) => (
-                <div className="flex mb-4">
+                <div className="flex mb-4" key={`level-${name}`}>
                   <div className="text-2xl mr-5">
                     <FaMedal color={color}/>
                   </div>
