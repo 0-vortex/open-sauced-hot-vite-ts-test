@@ -38,7 +38,7 @@ export async function updateVotesByRepo(repoName: string, votes: number, user?: 
     .update({ votes: votes + voteTally })
     .eq('repo_name', repoName);
 
-  console.error(error);
+  error && console.error(error);
 
   return recommendations ? recommendations[0].votes : 0;
 }
@@ -50,12 +50,12 @@ export async function fetchRecommendations(orderBy = 'total_stars', limit = 25) 
     .limit(limit)
     .order(orderBy, { ascending: false });
 
-  console.error(error);
+  error && console.error(error);
 
-  return recommendations;
+  return recommendations as DbRecomendation[] || [];
 }
 
-export async function fetchMyVotes(user: User | null) {
+export async function fetchMyVotes(user: User | null): Promise<DbRecomendation[]> {
   const githubId = user?.user_metadata.sub;
 
   // First get the users votes
@@ -76,5 +76,5 @@ export async function fetchMyVotes(user: User | null) {
     .order('votes', { ascending: false });
 
   if (error) console.error(error);
-  return votedRepos;
+  return votedRepos as DbRecomendation[] || [];
 }
