@@ -5,6 +5,18 @@
 
 > All notable changes to this project will be documented in this file
 
+### [1.2.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.2.1...v1.2.2) (2022-03-04)
+
+
+### 🤖 Build System
+
+* correct netlify build ([f112f7f](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/f112f7ff108315245441253dcc3ffb69d3ef68f2))
+
+
+### 🐛 Bug Fixes
+
+* test logging in ([d301b0a](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/d301b0aea58960ce9e524c598b7e4d635837dc60))
+
 ### [1.2.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.2.0...v1.2.1) (2022-03-03)
 
 
