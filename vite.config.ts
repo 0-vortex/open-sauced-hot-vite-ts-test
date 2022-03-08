@@ -29,7 +29,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   const isGlitchBuild = process.env.PROJECT_REMIX_CHAIN || false;
   const isCloudIdeBuild = isGitpodBuild || isReplitBuild || isStackblitzBuild || isCodeSandboxBuild || isGlitchBuild;
   const isNetlifyBuild = process.env.NETLIFY || false;
-  const isNetlifyPreviewBuild = isNetlifyBuild && process.env.PULL_REQUEST == 'true';
+  const isNetlifyPreviewBuild = isNetlifyBuild && process.env.CONTEXT == 'deploy-preview';
 
   const config:UserConfig = {
     base: "/",
@@ -120,12 +120,15 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
 
   // deploy preview build options
   if (isNetlifyBuild) {
-    console.log(process.env);
     console.log(process.env.URL);
     console.log(process.env.DEPLOY_URL);
     console.log(process.env.DEPLOY_PRIME_URL);
 
     config.base = `${process.env.URL}/`;
+
+    if (isNetlifyPreviewBuild) {
+      config.base = `${process.env.DEPLOY_PRIME_URL}/`;
+    }
   }
 
   return config;
