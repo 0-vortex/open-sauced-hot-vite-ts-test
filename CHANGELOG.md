@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [1.3.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.3.0...v1.3.1) (2022-03-08)
+
+
+### ✅ Tests
+
+* test bc and netlify env variables ([f0471d3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/f0471d3628a5e4ec2cb43869fe6d83e4d385970a))
+
 ## [1.3.0](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.2.2...v1.3.0) (2022-03-05)
 
 
