@@ -120,9 +120,10 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
 
   // deploy preview build options
   if (isNetlifyBuild) {
-    console.log(process.env.URL);
-    console.log(process.env.DEPLOY_URL);
-    console.log(process.env.DEPLOY_PRIME_URL);
+    console.log(`process.env.URL: `, process.env.URL);
+    console.log(`process.env.DEPLOY_URL: `, process.env.DEPLOY_URL);
+    console.log(`process.env.DEPLOY_PRIME_URL: `, process.env.DEPLOY_PRIME_URL);
+    console.log(`process.env.VITE_SUPABASE_URL: `, process.env.VITE_SUPABASE_URL);
 
     config.base = `${process.env.URL}/`;
 
