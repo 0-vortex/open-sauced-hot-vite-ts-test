@@ -5,6 +5,28 @@
 
 > All notable changes to this project will be documented in this file
 
+## [2.0.0](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.3.1...v2.0.0) (2022-03-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* test netlify preview variables and oauth return url
+
+### ✅ Tests
+
+* test netlify preview variables and oauth return url ([ba2bfdb](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/ba2bfdb0bd5d0266e9ef6155274a5653ffd0811a))
+
+
+### 🐛 Bug Fixes
+
+* complete the netlify deploy preview upstream configuration ([9162cee](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/9162cee6993f011a7b327ea51807346b492f1f03))
+
+
+### 🍕 Features
+
+* introduce beta branch deploys ([ac22753](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/ac22753045859d79a08e52b1e67860941dd3681d))
+* test deploy preview with synthetic PR login variables built in from supabase app ([8fe908a](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/8fe908a2de22561705f5bc68b2faaa91c436db05))
+
 ### [1.3.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v1.3.0...v1.3.1) (2022-03-08)
 
 
