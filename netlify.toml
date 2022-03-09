@@ -1,0 +1,16 @@
+[build]
+publish = "build"
+command = "npm run build"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[context.production]
+environment = { DEPLOY_TYPE = "production" }
+
+[context.deploy-preview]
+environment = { DEPLOY_TYPE = "preview" }
+
+[context.beta]
+base = "beta"
+environment = { DEPLOY_TYPE = "beta" }
