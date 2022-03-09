@@ -12,5 +12,4 @@ environment = { DEPLOY_TYPE = "production" }
 environment = { DEPLOY_TYPE = "preview" }
 
 [context.beta]
-base = "beta"
 environment = { DEPLOY_TYPE = "beta" }
