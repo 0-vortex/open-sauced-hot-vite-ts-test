@@ -30,6 +30,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   const isCloudIdeBuild = isGitpodBuild || isReplitBuild || isStackblitzBuild || isCodeSandboxBuild || isGlitchBuild;
   const isNetlifyBuild = process.env.NETLIFY || false;
   const isNetlifyPreviewBuild = isNetlifyBuild && process.env.CONTEXT == 'deploy-preview';
+  const isNetlifyChannelBuild = isNetlifyBuild && process.env.CHANNEL !== undefined;
 
   const config:UserConfig = {
     base: "/",
@@ -120,18 +121,23 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
 
   // deploy preview build options
   if (isNetlifyBuild) {
-    console.log(`----------------------------------------------------------------`);
-    console.log(`process.env.DEPLOY_TYPE: `, process.env.DEPLOY_TYPE);
-    console.log(`----------------------------------------------------------------`);
-    console.log(`process.env.URL: `, process.env.URL);
-    console.log(`process.env.DEPLOY_URL: `, process.env.DEPLOY_URL);
-    console.log(`process.env.DEPLOY_PRIME_URL: `, process.env.DEPLOY_PRIME_URL);
-    console.log(`process.env.VITE_SUPABASE_URL: `, process.env.VITE_SUPABASE_URL);
-    console.log(`----------------------------------------------------------------`);
+    // leave this section commented to test out custom domains later on
+    // console.log(`----------------------------------------------------------------`);
+    // console.log(`process.env.DEPLOY_TYPE: `, process.env.CHANNEL);
+    // console.log(`process.env.URL: `, process.env.URL);
+    // console.log(`process.env.DEPLOY_URL: `, process.env.DEPLOY_URL);
+    // console.log(`process.env.DEPLOY_PRIME_URL: `, process.env.DEPLOY_PRIME_URL);
+    // console.log(`----------------------------------------------------------------`);
 
     config.base = `${process.env.URL}/`;
 
     if (isNetlifyPreviewBuild) {
+      config.base = `${process.env.DEPLOY_PRIME_URL}/`;
+    }
+
+    // this might need manual intervention on custom domains
+    // leaving it like this to be extended or simplified
+    if (isNetlifyChannelBuild && ['alpha', 'beta'].includes(process.env.CHANNEL)) {
       config.base = `${process.env.DEPLOY_PRIME_URL}/`;
     }
   }
