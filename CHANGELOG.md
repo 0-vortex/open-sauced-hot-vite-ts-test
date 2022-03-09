@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [2.0.1-beta.3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v2.0.1-beta.2...v2.0.1-beta.3) (2022-03-09)
+
+
+### 🐛 Bug Fixes
+
+* introduce channel detection ([9b1584a](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/9b1584ad52952d278b32eda5473b614f38a93e20))
+
 ### [2.0.1-beta.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v2.0.1-beta.1...v2.0.1-beta.2) (2022-03-09)
 
 
