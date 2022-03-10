@@ -122,12 +122,12 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
   // deploy preview build options
   if (isNetlifyBuild) {
     // leave this section commented to test out custom domains later on
-    // console.log(`----------------------------------------------------------------`);
-    // console.log(`process.env.DEPLOY_TYPE: `, process.env.CHANNEL);
-    // console.log(`process.env.URL: `, process.env.URL);
-    // console.log(`process.env.DEPLOY_URL: `, process.env.DEPLOY_URL);
-    // console.log(`process.env.DEPLOY_PRIME_URL: `, process.env.DEPLOY_PRIME_URL);
-    // console.log(`----------------------------------------------------------------`);
+    console.log(`----------------------------------------------------------------`);
+    console.log(`process.env.DEPLOY_TYPE: `, process.env.CHANNEL);
+    console.log(`process.env.URL: `, process.env.URL);
+    console.log(`process.env.DEPLOY_URL: `, process.env.DEPLOY_URL);
+    console.log(`process.env.DEPLOY_PRIME_URL: `, process.env.DEPLOY_PRIME_URL);
+    console.log(`----------------------------------------------------------------`);
 
     config.base = `${process.env.URL}/`;
 
