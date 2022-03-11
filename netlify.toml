@@ -6,11 +6,10 @@ command = "npm run build"
 package = "@netlify/plugin-lighthouse"
 
 [context.production]
-environment = { DEPLOY_TYPE = "production" }
+environment = { CHANNEL = "production" }
 
 [context.deploy-preview]
-environment = { DEPLOY_TYPE = "preview" }
+environment = { CHANNEL = "staging" }
 
 [context.beta]
-base = "beta"
-environment = { DEPLOY_TYPE = "beta" }
+environment = { CHANNEL = "beta" }
