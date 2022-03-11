@@ -1,12 +1,12 @@
 {
   "name": "open-sauced-hot-vite-ts-test",
-  "version": "3.0.1",
+  "version": "3.0.2-beta.1",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "open-sauced-hot-vite-ts-test",
-      "version": "3.0.1",
+      "version": "3.0.2-beta.1",
       "license": "MIT",
       "dependencies": {
         "@headlessui/react": "^1.5.0",

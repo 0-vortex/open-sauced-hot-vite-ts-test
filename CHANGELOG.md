@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.0.2-beta.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.1...v3.0.2-beta.1) (2022-03-11)
+
+
+### ✅ Tests
+
+* log variables for custom domain ([#6](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/issues/6)) ([a1e39a3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/a1e39a33e145b7b801a775f01ccadab565947f2d))
+
 ### [3.0.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.0...v3.0.1) (2022-03-11)
 
 
