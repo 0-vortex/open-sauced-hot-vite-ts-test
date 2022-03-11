@@ -137,8 +137,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
     // leaving it like this to be extended or simplified
     if (isNetlifyChannelBuild && ['alpha', 'beta'].includes(process.env.CHANNEL)) {
       const { protocol, hostname } = new URL(process.env.URL);
-      config.base = `${protocol}/${process.env.CHANNEL}.${hostname}/`;
-      console.log(config.base);
+      config.base = `${protocol}//${process.env.CHANNEL}.${hostname}/`;
     }
   }
 
