@@ -5,6 +5,29 @@
 
 > All notable changes to this project will be documented in this file
 
+## [3.0.0](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v2.0.0...v3.0.0) (2022-03-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* make header black for testing purposes
+
+### ✅ Tests
+
+* add static netlify build configuration ([d087645](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/d08764568781f4c18e3a4fc7aab31d3cffa3104e))
+
+
+### 🍕 Features
+
+* test beta branch ([#2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/issues/2)) ([3ee1c1d](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/3ee1c1d4ff932b32525893c5f8b1655254559cee))
+
+
+### 🐛 Bug Fixes
+
+* correct beta builds ([891082b](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/891082b68bcebc4474f414ec337cbbad5b049f3d))
+* correct beta deploys ([#3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/issues/3)) ([d6bcae9](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/d6bcae94860fa8bf4d50888d362da6f4e64003bf))
+* introduce channel detection ([9b1584a](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/9b1584ad52952d278b32eda5473b614f38a93e20))
+
 ## [3.0.0-beta.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v2.0.1-beta.3...v3.0.0-beta.1) (2022-03-11)
 
 
