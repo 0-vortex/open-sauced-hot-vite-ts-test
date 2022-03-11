@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.0.2-beta.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.2-beta.1...v3.0.2-beta.2) (2022-03-11)
+
+
+### ✅ Tests
+
+* log another time ([2951154](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/2951154aaebd177ec73bfe1545eaa7943f41b45c))
+
 ### [3.0.2-beta.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.1...v3.0.2-beta.1) (2022-03-11)
 
 
