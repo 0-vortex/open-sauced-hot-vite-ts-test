@@ -8,7 +8,7 @@ const PrimaryNav = (): JSX.Element => {
   const { signIn, signOut, user } = useSupabaseAuth();
 
   return (
-    <nav className="flex bg-offWhite min-h-10 w-full font-roboto font-bold px-4 py-4 sm:py-2">
+    <nav className="flex bg-black min-h-10 w-full font-roboto font-bold px-4 py-4 sm:py-2">
       <div className="flex-1 flex text-2xl font-medium items-center">
         <a href="https://opensauced.pizza">
           <img
