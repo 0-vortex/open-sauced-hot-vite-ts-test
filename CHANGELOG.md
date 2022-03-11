@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.0.2-beta.5](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.2-beta.4...v3.0.2-beta.5) (2022-03-11)
+
+
+### 🐛 Bug Fixes
+
+* single out preview builds from the staging env logic ([510f830](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/510f83000b6ca934294d0189260e299f63b2a3c6))
+
 ### [3.0.2-beta.4](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.2-beta.3...v3.0.2-beta.4) (2022-03-11)
 
 
