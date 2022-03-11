@@ -121,13 +121,8 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
 
   // deploy preview build options
   if (isNetlifyBuild) {
-    // leave this section commented to test out custom domains later on
-    console.log(`process.env.CHANNEL: `, process.env.CHANNEL);
-    console.log(`process.env.URL: `, process.env.URL);
-    console.log(`process.env.DEPLOY_URL: `, process.env.DEPLOY_URL);
-    console.log(`process.env.DEPLOY_PRIME_URL: `, process.env.DEPLOY_PRIME_URL);
-
     config.base = `${process.env.URL}/`;
+    
 
     if (isNetlifyPreviewBuild) {
       config.base = `${process.env.DEPLOY_PRIME_URL}/`;
@@ -136,7 +131,6 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
       // leaving it like this to be extended or simplified
       if (isNetlifyChannelBuild && ['alpha', 'beta'].includes(process.env.CHANNEL)) {
         const {protocol, hostname} = new URL(process.env.URL);
-        console.log(process.env.BRANCH);
         config.base = `${protocol}//${process.env.CHANNEL}.${hostname}/`;
       }
     }
