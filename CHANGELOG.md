@@ -5,6 +5,21 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.0.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.1...v3.0.2) (2022-03-11)
+
+
+### ✅ Tests
+
+* log another time ([2951154](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/2951154aaebd177ec73bfe1545eaa7943f41b45c))
+* log variables for custom domain ([#6](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/issues/6)) ([a1e39a3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/a1e39a33e145b7b801a775f01ccadab565947f2d))
+* use better variables ([39c3d2d](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/39c3d2d3efd67ad68d8f13127ee62bcdc1948f97))
+
+
+### 🐛 Bug Fixes
+
+* single out preview builds from the staging env logic ([510f830](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/510f83000b6ca934294d0189260e299f63b2a3c6))
+* this should work for beta builds ([bd31504](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/bd31504b34d7eef8d2c816ca844e0670cb881731))
+
 ### [3.0.2-beta.5](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.2-beta.4...v3.0.2-beta.5) (2022-03-11)
 
 
