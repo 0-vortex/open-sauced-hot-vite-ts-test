@@ -131,13 +131,14 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
 
     if (isNetlifyPreviewBuild) {
       config.base = `${process.env.DEPLOY_PRIME_URL}/`;
-    }
-
-    // this might need manual intervention on custom domains
-    // leaving it like this to be extended or simplified
-    if (isNetlifyChannelBuild && ['alpha', 'beta'].includes(process.env.CHANNEL)) {
-      const { protocol, hostname } = new URL(process.env.URL);
-      config.base = `${protocol}//${process.env.CHANNEL}.${hostname}/`;
+    } else {
+      // this might need manual intervention on custom domains
+      // leaving it like this to be extended or simplified
+      if (isNetlifyChannelBuild && ['alpha', 'beta'].includes(process.env.CHANNEL)) {
+        const {protocol, hostname} = new URL(process.env.URL);
+        console.log(process.env.BRANCH);
+        config.base = `${protocol}//${process.env.CHANNEL}.${hostname}/`;
+      }
     }
   }
 
