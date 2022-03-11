@@ -136,6 +136,7 @@ export default defineConfig(({command, mode}: ConfigEnv): UserConfig => {
     // this might need manual intervention on custom domains
     // leaving it like this to be extended or simplified
     if (isNetlifyChannelBuild && ['alpha', 'beta'].includes(process.env.CHANNEL)) {
+      console.log(process.env);
       config.base = `${process.env.DEPLOY_PRIME_URL}/`;
     }
   }
