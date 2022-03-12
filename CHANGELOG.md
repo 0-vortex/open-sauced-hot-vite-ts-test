@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.1.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.1.0...v3.1.1) (2022-03-12)
+
+
+### 🧑‍💻 Code Refactoring
+
+* remove pointless logging ([ff12024](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/ff120244a944523c1640c47f19fb13e1c9ae31ed))
+
 ## [3.1.0](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.2...v3.1.0) (2022-03-12)
 
 
