@@ -12,10 +12,10 @@ jobs:
     name: Set environment variables
     runs-on: ubuntu-latest
     steps:
-      - name: "☁️ checkout repository"
+      - name: "☁️ genereate environment variables"
+        id: env
         run: |
-          echo $([[ ${{ github.ref_name }} == 'main' ]] && echo "production" || echo ${{ github.ref_name }})
-          echo "DEPLOY_ENVIRONMENT=$([[ ${{ github.ref_name }} == 'main' ]] && echo "production" || echo ${{ github.ref_name }})" >> $GITHUB_ENV
+          echo "::set-output name=DEPLOY_ENVIRONMENT::$([[ ${{ github.ref_name }} == 'main' ]] && echo 'production' || echo ${{ github.ref_name }})"
 
   test:
     name: Test and lint
@@ -107,7 +107,7 @@ jobs:
 
   release:
     environment:
-      name: ${{ jobs.setup.env.DEPLOY_ENVIRONMENT }}
+      name: ${{ jobs.setup.steps.env.DEPLOY_ENVIRONMENT }}
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
     name: Semantic release
     needs:
@@ -124,7 +124,7 @@ jobs:
       - name: "♻️ clean up artifact paths"
         run: |
           rm -rf public/diagram.svg
-          echo "${{ env.DEPLOY_ENVIRONMENT }}"
+          echo ${{ jobs.setup.steps.env.DEPLOY_ENVIRONMENT }}
 
       - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
