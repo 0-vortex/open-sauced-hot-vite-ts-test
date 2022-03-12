@@ -7,6 +7,9 @@ on:
       - alpha
       - beta
 
+env:
+  DEPLOY_ENVIRONMENT: [[ ${{ github.ref_name }} == 'main' ]] && echo "production" || echo ${{ github.ref_name }}
+
 jobs:
   test:
     name: Test and lint
@@ -98,7 +101,7 @@ jobs:
 
   release:
     environment:
-      name: ${{ github.ref_name }}
+      name: ${{ env.DEPLOY_ENVIRONMENT }}
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
     name: Semantic release
     needs:
@@ -115,7 +118,7 @@ jobs:
       - name: "♻️ clean up artifact paths"
         run: |
           rm -rf public/diagram.svg
-          echo "${{ github.ref_name }}"
+          echo "${{ env.DEPLOY_ENVIRONMENT }}"
 
       - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
