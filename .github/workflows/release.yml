@@ -107,7 +107,7 @@ jobs:
 
   release:
     environment:
-      name: ${{ env.DEPLOY_ENVIRONMENT }}
+      name: ${{ jobs.setup.env.DEPLOY_ENVIRONMENT }}
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
     name: Semantic release
     needs:
