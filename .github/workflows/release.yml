@@ -98,7 +98,7 @@ jobs:
 
   release:
     environment:
-      name: ${{GITHUB_REF_NAME}}
+      name: ${{ github.ref_name }}
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
     name: Semantic release
     needs:
