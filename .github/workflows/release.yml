@@ -98,7 +98,7 @@ jobs:
 
   release:
     environment:
-      name: production
+      name: ${{GITHUB_REF_NAME}}
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
     name: Semantic release
     needs:
@@ -115,6 +115,7 @@ jobs:
       - name: "♻️ clean up artifact paths"
         run: |
           rm -rf public/diagram.svg
+          echo "${{GITHUB_REF_NAME}}"
 
       - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
