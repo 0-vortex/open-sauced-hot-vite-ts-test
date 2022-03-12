@@ -14,7 +14,7 @@ jobs:
     outputs:
       DEPLOY_ENVIRONMENT: ${{ steps.env.outputs.DEPLOY_ENVIRONMENT }}
     steps:
-      - name: "☁️ genereate environment variables"
+      - name: "☁️ compute environment variables"
         id: env
         run: |
           echo "::set-output name=DEPLOY_ENVIRONMENT::$([[ ${{ github.ref_name }} == 'main' ]] && echo 'production' || echo ${{ github.ref_name }})"
@@ -127,7 +127,6 @@ jobs:
       - name: "♻️ clean up artifact paths"
         run: |
           rm -rf public/diagram.svg
-          echo ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}
 
       - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
