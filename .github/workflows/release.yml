@@ -115,7 +115,7 @@ jobs:
       - name: "♻️ clean up artifact paths"
         run: |
           rm -rf public/diagram.svg
-          echo "${{GITHUB_REF_NAME}}"
+          echo "${{ github.ref_name }}"
 
       - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
