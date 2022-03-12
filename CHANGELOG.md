@@ -5,6 +5,29 @@
 
 > All notable changes to this project will be documented in this file
 
+## [3.1.0-beta.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.2...v3.1.0-beta.1) (2022-03-12)
+
+
+### 🍕 Features
+
+* xtdsxd ([#8](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/issues/8)) ([1286e94](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/1286e9424cf7eca1e05fdd7b41dd969b771544a4))
+
+
+### ✅ Tests
+
+* test rebase branch ([e8dab46](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/e8dab46c9ddefc91eeeb64dc78569c39f21a23c9))
+* use dynamic environment naming ([fb7259c](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/fb7259cbfc118f61fcd286160e671fd3fdd39c98))
+
+
+### 🔁 Continuous Integration
+
+* correct github branch environment ([5537005](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/553700513a72e92c245dfba389f3330699bba71c))
+
+
+### 🐛 Bug Fixes
+
+* proper fix env ([e0a5adc](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/e0a5adc00940b35def36bbb99b165964ba685a01))
+
 ### [3.0.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.0.1...v3.0.2) (2022-03-11)
 
 
