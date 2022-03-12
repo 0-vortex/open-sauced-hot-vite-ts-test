@@ -7,10 +7,16 @@ on:
       - alpha
       - beta
 
-env:
-  DEPLOY_ENVIRONMENT: "$([[ ${{ github.ref_name }} == 'main' ]] && echo 'production' || echo ${{ github.ref_name }})"
-
 jobs:
+  setup:
+    name: Set environment variables
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        run: |
+          echo $([[ ${{ github.ref_name }} == 'main' ]] && echo "production" || echo ${{ github.ref_name }})
+          echo "DEPLOY_ENVIRONMENT=$([[ ${{ github.ref_name }} == 'main' ]] && echo "production" || echo ${{ github.ref_name }})" >> $GITHUB_ENV
+
   test:
     name: Test and lint
     uses: open-sauced/open-sauced/.github/workflows/development.yml@main
