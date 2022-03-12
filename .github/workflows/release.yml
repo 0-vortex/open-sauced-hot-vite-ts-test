@@ -11,6 +11,8 @@ jobs:
   setup:
     name: Set environment variables
     runs-on: ubuntu-latest
+    outputs:
+      DEPLOY_ENVIRONMENT: ${{ steps.env.outputs.DEPLOY_ENVIRONMENT }}
     steps:
       - name: "☁️ genereate environment variables"
         id: env
@@ -107,10 +109,11 @@ jobs:
 
   release:
     environment:
-      name: ${{ jobs.setup.steps.env.DEPLOY_ENVIRONMENT }}
+      name: ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
     name: Semantic release
     needs:
+      - setup
       - test
       - docker
       - build
@@ -124,7 +127,7 @@ jobs:
       - name: "♻️ clean up artifact paths"
         run: |
           rm -rf public/diagram.svg
-          echo ${{ jobs.setup.steps.env.DEPLOY_ENVIRONMENT }}
+          echo ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}
 
       - name: "📂 download docker artifacts"
         uses: actions/download-artifact@v2
