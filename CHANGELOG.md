@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.1.3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.1.2...v3.1.3) (2022-03-13)
+
+
+### ✅ Tests
+
+* mirror local env and expose ci issue ([2b11826](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/2b118262199a3456849d8c793c42b0f170e032c1))
+
 ### [3.1.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.1.1...v3.1.2) (2022-03-12)
 
 
