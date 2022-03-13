@@ -167,10 +167,10 @@ jobs:
           production-branch: main
           production-deploy: ${{ needs.setup.outputs.PRODUCTION }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}@${{ steps.semantic-release.outputs.release-tag }} from ${{ github.sha }}"
+#          deploy-message: "Deploy ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}@${{ steps.semantic-release.outputs.release-tag }} from ${{ github.sha }}"
           enable-pull-request-comment: false
           enable-commit-comment: true
-          enable-commit-status: true
+          enable-commit-status: false
           overwrites-pull-request-comment: true
           netlify-config-path: ./netlify.toml
           alias: ${{ github.head_ref }}
