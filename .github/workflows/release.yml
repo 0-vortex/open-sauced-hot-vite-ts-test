@@ -173,7 +173,7 @@ jobs:
           enable-commit-status: true
           overwrites-pull-request-comment: true
           netlify-config-path: ./netlify.toml
-#          alias: ${{ github.head_ref }}
+          alias: ${{ github.head_ref }}
           github-deployment-environment: ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}
           github-deployment-description: "Released ${{ steps.semantic-release.outputs.release-tag }} and deployed from ${{ github.sha }}"
           fails-without-credentials: true
