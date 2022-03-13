@@ -13,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       DEPLOY_ENVIRONMENT: ${{ steps.env.outputs.DEPLOY_ENVIRONMENT }}
+      PRODUCTION: ${{ steps.env.outputs.PRODUCTION }}
     steps:
       - name: "☁️ compute environment variables"
         id: env
         run: |
           echo "::set-output name=DEPLOY_ENVIRONMENT::$([[ ${{ github.ref_name }} == 'main' ]] && echo 'production' || echo ${{ github.ref_name }})"
+          echo "::set-output name=PRODUCTION::$([[ ${{ github.ref_name }} == 'main' ]] && echo 'true' || echo 'false'"
 
   test:
     name: Test and lint
@@ -163,7 +165,7 @@ jobs:
         with:
           publish-dir: build
           production-branch: main
-          production-deploy: ${{ github.ref == "refs/heads/main" }}
+          production-deploy: ${{ needs.setup.outputs.PRODUCTION }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}@${{ steps.semantic-release.outputs.release-tag }} from ${{ github.sha }}"
           enable-pull-request-comment: false
