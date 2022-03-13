@@ -157,6 +157,29 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: "🚀 deploy to netlify"
+        id: netlify
+        uses: nwtgck/actions-netlify@v1
+        with:
+          publish-dir: build
+          production-branch: main
+          production-deploy: ${{ github.ref == "refs/heads/main" }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}@${{ steps.semantic-release.outputs.release-tag }} from ${{ github.sha }}"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          enable-commit-status: true
+          overwrites-pull-request-comment: true
+          netlify-config-path: ./netlify.toml
+          alias: ${{ github.head_ref }}
+          github-deployment-environment: ${{ needs.setup.outputs.DEPLOY_ENVIRONMENT }}
+          github-deployment-description: "Released ${{ steps.semantic-release.outputs.release-tag }} and deployed from ${{ github.sha }}"
+          fails-without-credentials: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 3
+
   cleanup:
     name: Cleanup actions
     needs:
