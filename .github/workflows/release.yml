@@ -165,7 +165,7 @@ jobs:
         with:
           publish-dir: build
           production-branch: main
-          production-deploy: ${{ needs.setup.outputs.PRODUCTION }}
+          production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ github.event.head_commit.message }}
           enable-pull-request-comment: false
