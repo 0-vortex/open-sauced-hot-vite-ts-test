@@ -80,6 +80,7 @@
     "jest": "^27.5.1",
     "jest-axe": "^6.0.0",
     "jest-watch-typeahead": "^1.0.0",
+    "netlify-cli": "^9.13.3",
     "node-notifier": "^10.0.1",
     "p-limit": "^4.0.0",
     "rollup-plugin-visualizer": "^5.6.0",
