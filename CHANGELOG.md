@@ -5,6 +5,35 @@
 
 > All notable changes to this project will be documented in this file
 
+## [3.3.0](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.2.2...v3.3.0) (2022-03-18)
+
+
+### 🐛 Bug Fixes
+
+* correct branch deploy target ([c78ee81](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/c78ee81a9d36dc45c2d5c82e76de4e3f892be82d))
+* test display as branch deploy ([c529d13](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/c529d138fe8c732dce55accd440dfd2ef1eb7e2e))
+
+
+### 🔁 Continuous Integration
+
+* fix staging env release ([3399591](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/33995916dfe0857616f59e5cc1b334aec4dd172b))
+
+
+### 🤖 Build System
+
+* update dependencies and upstream changes ([51492f3](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/51492f34c9e8c1326e062a5f07c99577faf8fa0d))
+
+
+### ✅ Tests
+
+* test branch builds ([f667971](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/f6679710673e3d8c1a57c3ff2014bc7977eeef8b))
+* test cli commits netlify deploy ([dae6ab1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/dae6ab10359e2632927cbbb1a3cd9cde02b9e903))
+
+
+### 🍕 Features
+
+* test deploy previews pr ([#11](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/issues/11)) ([b704461](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/b70446178f58e057446d34998cb150143faaf76f))
+
 ## [3.3.0-beta.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.2.3-beta.5...v3.3.0-beta.1) (2022-03-18)
 
 
