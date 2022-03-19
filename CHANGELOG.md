@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [3.3.2](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.3.1...v3.3.2) (2022-03-19)
+
+
+### 🤖 Build System
+
+* remove extraneous netlify post-release action ([4d7bac8](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/commit/4d7bac813bd64e900f5e0b8a05bb60aaf3ebd37d))
+
 ### [3.3.1](https://github.com/0-vortex/open-sauced-hot-vite-ts-test/compare/v3.3.0...v3.3.1) (2022-03-18)
 
 
