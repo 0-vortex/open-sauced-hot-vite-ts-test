@@ -159,26 +159,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-#      - name: "🚀 deploy to netlify"
-#        id: netlify
-#        uses: nwtgck/actions-netlify@v1
-#        with:
-#          publish-dir: build
-#          production-branch: main
-#          production-deploy: ${{ needs.setup.outputs.PRODUCTION }}
-#          github-token: ${{ secrets.GITHUB_TOKEN }}
-#          deploy-message: ${{ github.event.head_commit.message }}
-#          enable-commit-comment: true
-#          enable-commit-status: true
-#          overwrites-pull-request-comment: true
-#          netlify-config-path: ./netlify.toml
-#          alias: ${{ github.head_ref }}
-#          fails-without-credentials: true
-#        env:
-#          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-#          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-#        timeout-minutes: 2
-
   cleanup:
     name: Cleanup actions
     needs:
